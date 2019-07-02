@@ -1,4 +1,7 @@
 .row
+  #localStorage
+
+.row
   .col-sm-4.offset-sm-8
     #search-box
       = form_tag("/", method: :get) do
@@ -14,7 +17,7 @@
 .row
   - @films["results"].map do |film|
     .col-sm-4.py-2
-      .card{id: film['episode_id']}
+      .card#film{id: film['episode_id']}
         .card-body
           .film-header
             %a{:href => "films/#{film["url"].split('/')[-1]}"}
@@ -29,4 +32,31 @@
             .info-section
               %label Favorite
               %span
-                %button.btn.btn-primary.btn-sm#add-to-favorite{value: film['episode_id']} ADD
+                %i.fa.fa-star.hidden#icon-film{:id => "#{film["episode_id"]}"}
+                %button.btn.btn-primary.btn-sm.add-to-favorite#film{:id => "#{film["episode_id"]}", :onclick => "addToFavorite(""'#{film["url"]}'" + ", this.id)"} ADD
+
+
+
+:javascript
+
+  addToFavorite = function(film, id, event) {
+    console.log(id);
+    var items = [];
+    items.push(film);
+    localStorage.setItem('favoriteFilms', items);
+    $("#"+id+"").addClass('fav-film');
+    $(".add-to-favorite#"+id+"").hide();
+    $("#icon-"+id+"").removeClass('hidden');
+
+    var notif;
+    notif = $('#notification-msg');
+    notif.removeClass('hidden');
+    return setTimeout((function() {
+      notif.addClass('hidden');
+    }), 2000);
+
+    $("'#"+ id +"'").addClass('fav-film');
+
+
+    event.preventDefault();
+  };

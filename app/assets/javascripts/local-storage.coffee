@@ -1,7 +1,10 @@
 ready = ->
-  # itemsArray = if localStorage.getItem('items') then JSON.parse(localStorage.getItem('items')) else []
-  # localStorage.setItem 'items', JSON.stringify(itemsArray)
-  # data = JSON.parse(localStorage.getItem('items'))
+
+    # obj = JSON.parse($(this).val())
+    # returnData = Object.assign(obj, {favorite: true})
+    # favoriteFilms = []
+    # localStorage.setItem("favoriteFilms", JSON.stringify(returnData))
+    # return
 
 $(document).ready(ready)
 $(document).on('turbolinks:load', ready)

@@ -2,13 +2,13 @@
   background-color: $empire-attack-dark !important;
 }
 
-#add-to-favorite {
+.add-to-favorite {
   padding: 2px 5px;
   font-size: 10px;
   background-color: $empire-attack-dark;
   border-color: $empire-attack-dark;
 }
-#add-to-favorite:hover {
+.add-to-favorite:hover {
   background-color: $empire-attack-darker;
   border-color: $empire-attack-darker;
 }

@@ -99,3 +99,33 @@ a.btn-secondary,
 a.btn-secondary:hover {
   color: $white !important;
 }
+
+.toast {
+  max-width: 350px;
+  overflow: hidden;
+  font-size: .875rem;
+  background-color: $empire-attack-darker;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: .25rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.1);
+}
+.toast-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .25rem .75rem;
+  color: $white;
+  background-color: $empire-attack-darker;
+  background-clip: padding-box;
+}
+.toast-body {
+  font-size: 12px;
+  padding: .75rem;
+  color: $white;
+}
+
+.fav-film {
+  background: #f7f9ff;
+}

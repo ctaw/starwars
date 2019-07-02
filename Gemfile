@@ -43,6 +43,7 @@ gem 'jquery-rails', '~> 4.3.1'
 gem 'font_awesome5_rails'
 gem 'jquery-datatables'
 gem 'rails_12factor'
+gem 'pry-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

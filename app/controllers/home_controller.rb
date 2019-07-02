@@ -8,12 +8,22 @@ class HomeController < ApplicationController
     else
       response = RestClient.get "#{swapi_url}films"
     end
-
     @films = JSON.parse(response)
 
     respond_to do |format|
       format.html {}
       format.json { render json: @films }
+    end
+  end
+
+  def favorite_films
+    url = params[:favs]
+    fav_response = RestClient.get url
+    @favorite_films = JSON.parse(fav_response)
+    
+    respond_to do |format|
+      format.html {}
+      format.json { render json: @favorite_films }
     end
   end
 
