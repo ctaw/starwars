@@ -1,0 +1,101 @@
+// *********** Films or Movies ***********
+.film-header {
+  display: table;
+  width: 100%;
+  .film-title {
+    font-size: 19px;
+    margin: 0;
+    display: table-cell;
+  }
+}
+.film-info {
+  display: table;
+  width: 100%;
+  margin-top: 1em;
+  .info-section:first-of-type {
+    text-align: left;
+  }
+  .info-section label {
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: .5em;
+    font-size: 9px;
+  }
+  .info-section span {
+    font-weight: 700;
+    font-size: 10px;
+  }
+  .info-section {
+    display: table-cell;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+#search-box {
+  margin-bottom: 25px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+// ******** Film page
+.film-card {
+  .film-title {
+    font-size: 14px;
+  }
+  .card-text {
+    text-align: justify;
+    color: #5b6476;
+  }
+  .card-title {
+    font-size: 14px !important;
+    font-weight: 700;
+  }
+}
+.film-other-info {
+  .tab-header {
+    padding: 5px 5px 0 5px;
+  }
+  .cpvs {
+    border-bottom: none;
+  }
+}
+
+.borderless {
+  .list-group-item {
+    border: none;
+  }
+}
+.tab-content {
+  padding: 15px;
+}
+.paginate_button:hover {
+  background: $empire-attack-dark !important;
+  border-color: $empire-attack-dark !important;
+}
+a:disabled:hover,
+.disabled:hover {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+#dttb_filter {
+  input[type=search]{
+    height: 31px;
+    padding: 6px 8px;
+    font-size: 11px;
+    line-height: 1.42857143;
+    color: #4d5870;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #c5cad4;
+    border-radius: 4px;
+  }
+}
+a.btn-secondary,
+a.btn-secondary:hover {
+  color: $white !important;
+}

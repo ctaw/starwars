@@ -1,0 +1,39 @@
+.row
+  .col-md-12
+    .float-right
+      %a{href: root_path, class: 'btn btn-secondary btn-sm mb-20'} Back
+
+.row
+  .col-md-4
+    .card.bg-light.mb-3.film-card
+      .card-header.film-title= @data[:film]["title"]
+      .card-body
+        %h5.card-title Director:
+        %p.card-text= @data[:film]["director"]
+
+        %h5.card-title Producer:
+        %p.card-text= @data[:film]["producer"]
+
+        %h5.card-title Opening Crawl:
+        %p.card-text= @data[:film]["opening_crawl"]
+
+
+  .col-md-8
+    .card.film-other-info
+      .card-header.tab-header.empire-tab
+        %ul.nav.nav-tabs.cpvs
+          %li.nav-item
+            %a.nav-link.active{"data-toggle" => "tab", :href => "#characters"} Characters
+          %li.nav-item
+            %a.nav-link{"data-toggle" => "tab", :href => "#planets", :role => "tab"} Planets
+          %li.nav-item
+            %a.nav-link{"data-toggle" => "tab", :href => "#vehicles", :role => "tab"} Vehicles
+          %li.nav-item
+            %a.nav-link{"data-toggle" => "tab", :href => "#species", :role => "tab"} Species
+      .card-body
+        .tab-content
+          #characters.tab-pane.active
+            = render 'characters'
+          #planets.tab-pane.fade
+          #vehicles.tab-pane.fade
+          #species.tab-pane.fade

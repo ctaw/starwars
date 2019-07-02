@@ -1,0 +1,32 @@
+.row
+  .col-sm-4.offset-sm-8
+    #search-box
+      = form_tag("/", method: :get) do
+        .input-group
+          %input.form-control#search{:name => "search"}
+          .input-group-append
+            = submit_tag "Search", class: "btn btn-secondary"
+
+            %a.btn.btn-default{href: '/'}
+              %i.fa.fa-times
+
+%hr.mb-30
+.row
+  - @films["results"].map do |film|
+    .col-sm-4.py-2
+      .card
+        .card-body
+          .film-header
+            %a{:href => "films/#{film["url"].split('/')[-1]}"}
+              %h3.film-title= film["title"]
+          .film-info
+            .info-section
+              %label Relase Date
+              %span= format_date(film["release_date"])
+            .info-section
+              %label Director
+              %span= film["director"]
+            .info-section
+              %label Favorite
+              %span
+                %button.btn.btn-primary.btn-sm#add-to-favorite ADD

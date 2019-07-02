@@ -1,0 +1,41 @@
+@import "bootstrap";
+@import 'font_awesome5_webfont';
+@import 'datatables';
+@import "variables";
+@import "header";
+@import "main";
+@import "overrides";
+
+@font-face {
+  font-family: 'Montserrat';
+  src:url('montserrat-regular.eot');
+  src:url('montserrat-regular.eot?#iefix') format('embedded-opentype'),
+    url('montserrat-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 13px;
+  line-height: 1.5;
+  background-color: $white;
+  color: $text_color;
+  font-weight: 300;
+}
+
+main {
+  margin-top: 2.5rem;
+  width: 100%;
+  a {
+    color: $dark !important;
+  }
+  a:hover {
+    text-decoration: none !important;
+    color: $empire-attack !important;
+  }
+}

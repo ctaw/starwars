@@ -1,0 +1,24 @@
+%table.table.table-hover#dttb
+  %thead
+    %tr
+      %th Name
+      %th
+
+  %tbody
+    - @data[:characters].each do |char|
+      %tr
+        %td= char["name"]
+        %td
+          %a{"data-content" => "<div><p>Height: #{char['height']}</p> <p>Mass: #{char['mass']}</p> <p>Hair Color: #{char['hair_color']}</p><p>Skin Color: #{char['skin_color']}</p><p>Eye Color: #{char['eye_color']}</p><p>Birth Year: #{char['birth_year']}</p><p>Gender: #{char['gender']}</p></div>".html_safe, "data-toggle" => "popover", "data-trigger" => "focus", :role => "button", :tabindex => "0", :title => "#{char['name']}"}
+            %i.fa.fa-info-circle
+
+
+
+:javascript
+  $(document).ready(function() {
+    $('#dttb').dataTable({
+      'pageLength': 5,
+      'lengthChange': false,
+      'pagingType': 'simple'
+    });
+  });

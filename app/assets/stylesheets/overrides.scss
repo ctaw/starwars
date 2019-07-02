@@ -1,0 +1,32 @@
+.bg-dark {
+  background-color: $empire-attack-dark !important;
+}
+
+#add-to-favorite {
+  padding: 2px 5px;
+  font-size: 10px;
+  background-color: $empire-attack-dark;
+  border-color: $empire-attack-dark;
+}
+#add-to-favorite:hover {
+  background-color: $empire-attack-darker;
+  border-color: $empire-attack-darker;
+}
+
+.btn-secondary {
+  background-color: $empire-attack-dark;
+  border-color: $empire-attack-dark;
+}
+.btn-secondary:hover {
+  background-color: $empire-attack-darker;
+  border-color: $empire-attack-darker;
+}
+.btn-default {
+  border-color: $empire-attack-dark;
+  i {
+    color: $empire-attack-dark;
+  }
+}
+input[name=search] {
+  border: 1px solid $empire-attack-dark;
+}
