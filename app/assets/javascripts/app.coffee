@@ -1,6 +1,5 @@
 ready = ->
 
-  
   $('[data-toggle=popover]').popover
     html: true
     content: ->

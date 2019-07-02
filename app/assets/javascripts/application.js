@@ -5,4 +5,5 @@
 //= require turbolinks
 //= require datatables
 //= require app
+//= require local-storage
 //= require_tree .

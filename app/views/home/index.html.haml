@@ -14,7 +14,7 @@
 .row
   - @films["results"].map do |film|
     .col-sm-4.py-2
-      .card
+      .card{id: film['episode_id']}
         .card-body
           .film-header
             %a{:href => "films/#{film["url"].split('/')[-1]}"}
@@ -29,4 +29,4 @@
             .info-section
               %label Favorite
               %span
-                %button.btn.btn-primary.btn-sm#add-to-favorite ADD
+                %button.btn.btn-primary.btn-sm#add-to-favorite{value: film['episode_id']} ADD

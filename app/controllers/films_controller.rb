@@ -7,7 +7,7 @@ class FilmsController < ApplicationController
 
     @film = JSON.parse(response)
 
-    # Get all characters for this film
+    # ***** Characters
     char_urls = []
     char_urls = @film["characters"]
 
@@ -25,7 +25,38 @@ class FilmsController < ApplicationController
 
     @characters = char_arr
 
-    @data = { :film => @film, :characters => @characters }
+    # ***** Planets
+    planet_urls = []
+    planet_urls = @film["planets"]
+    planet_arr = []
+    planet_urls.each do |url|
+      name = RestClient.get url
+      planet_arr << JSON.parse(name)
+    end
+    @planets = planet_arr
+
+    # ***** Vehicles
+    vehicle_urls = []
+    vehicle_urls = @film["vehicles"]
+    vehicle_arr = []
+    vehicle_urls.each do |url|
+      name = RestClient.get url
+      vehicle_arr << JSON.parse(name)
+    end
+    @vehicles = vehicle_arr
+
+    # ***** Species
+    specie_urls = []
+    specie_urls = @film["species"]
+    specie_arr = []
+    specie_urls.each do |url|
+      name = RestClient.get url
+      specie_arr << JSON.parse(name)
+    end
+    @species = specie_arr
+
+
+    @data = { :film => @film, :characters => @characters, :planets => @planets, :vehicles => @vehicles, :species => @species }
 
     respond_to do |format|
       format.html {}

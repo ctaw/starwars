@@ -1,0 +1,20 @@
+%table.table.table-hover#species-table
+  %thead
+    %tr
+      %th Name
+
+  %tbody
+    - @data[:species].each do |specie|
+      %tr
+        %td= specie["name"]
+
+
+
+:javascript
+  $(document).ready(function() {
+    $('#species-table').dataTable({
+      'pageLength': 5,
+      'lengthChange': false,
+      'pagingType': 'simple'
+    });
+  });

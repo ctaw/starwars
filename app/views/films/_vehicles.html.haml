@@ -1,0 +1,20 @@
+%table.table.table-hover#vehicles-table
+  %thead
+    %tr
+      %th Name
+
+  %tbody
+    - @data[:vehicles].each do |vehicle|
+      %tr
+        %td= vehicle["name"]
+
+
+
+:javascript
+  $(document).ready(function() {
+    $('#vehicles-table').dataTable({
+      'pageLength': 5,
+      'lengthChange': false,
+      'pagingType': 'simple'
+    });
+  });

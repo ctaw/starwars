@@ -82,7 +82,7 @@ a:disabled:hover,
   cursor: not-allowed;
   pointer-events: none;
 }
-#dttb_filter {
+.dataTables_filter {
   input[type=search]{
     height: 31px;
     padding: 6px 8px;

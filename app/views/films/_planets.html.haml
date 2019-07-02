@@ -1,0 +1,20 @@
+%table.table.table-hover#planet-table
+  %thead
+    %tr
+      %th Name
+
+  %tbody
+    - @data[:planets].each do |planet|
+      %tr
+        %td= planet["name"]
+
+
+
+:javascript
+  $(document).ready(function() {
+    $('#planet-table').dataTable({
+      'pageLength': 5,
+      'lengthChange': false,
+      'pagingType': 'simple'
+    });
+  });

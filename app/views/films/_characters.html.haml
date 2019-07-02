@@ -1,4 +1,4 @@
-%table.table.table-hover#dttb
+%table.table.table-hover#characters-table
   %thead
     %tr
       %th Name
@@ -16,7 +16,7 @@
 
 :javascript
   $(document).ready(function() {
-    $('#dttb').dataTable({
+    $('#characters-table').dataTable({
       'pageLength': 5,
       'lengthChange': false,
       'pagingType': 'simple'
