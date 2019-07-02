@@ -38,7 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml', '~> 5.0.4'
 gem 'haml-rails'
 gem 'rest-client'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails', '~> 4.3.1'
 gem 'font_awesome5_rails'
 gem 'jquery-datatables'
